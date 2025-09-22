@@ -6,10 +6,18 @@ console.log("Jay mata di ");
 //     if(typeof num1==="number" && typeof num2==="number" ){
 //         return num1+num2 ; 
 //     }
-function add(num1, num2) {
-    return num1 + num2;
+function add(num1, num2, printRes, someText) {
+    if (printRes) {
+        console.log("".concat(someText, ",").concat(num1 + num2));
+    }
+    else {
+        return num1 + num2;
+    }
 }
-var n1 = 10;
+var n1 = 40;
 var n2 = 90;
-var res = add(n1, n2);
-console.log(res);
+var printRes = true;
+var someText = "Sum of Two number is -";
+// const res = add(n1,n2);
+add(n1, n2, printRes, someText);
+// console.log(res);

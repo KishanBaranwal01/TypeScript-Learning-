@@ -9,16 +9,25 @@ console.log("Jay mata di ");
 //         return num1+num2 ; 
 //     }
 
-function add(num1:number , num2:number){ // TS method that defines that both value contains only number 
-    return num1+num2 ;
+function add(num1:number , num2:number , printRes:boolean,someText:string){ // TS method that defines that both value contains only number 
+   
+    if(printRes){
+        console.log(`${someText} ${num1+num2}`);
+        
+    }
+    else{
+         return num1+num2 ;
+    }
 }
    
     
 
 
-const n1= 10 ;
+const n1= 40 ;
 const n2=90 ;
+const printRes = true ; 
+const someText = "Sum of Two number is -"
+// const res = add(n1,n2);
+add(n1,n2,printRes,someText) 
 
-const res = add(n1,n2);
-
-console.log(res);
+// console.log(res);
